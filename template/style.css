@@ -1,0 +1,539 @@
+/* GLOBAL STYLE*/
+
+/*
+
+Theme Name: Wordpress Spring 2017 Section 02 Demo
+Author: Trang Pham  
+Author URI: http://tidbitwebdesign.com
+Description: This is the demo theme for the WEB170 section 02 class foor Spring 2017 Quarter.
+Version: 42.0
+
+*/
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background:#fff;
+    font-family: 'Raleway', sans-serif, arial;
+    color:#404040;
+}
+header{
+    width:100%;
+    align-content: center;
+}
+#logo{
+    width:300px;
+    margin:0 auto;
+    padding: 10px 0;
+}
+.buger-toggle{
+    display:none;
+}
+/* Nav styling for WP */
+#navigation {
+    height:50px;
+    width:100%;
+    line-height:50px;
+    background-color:#ffccb3;
+}
+#navigation ul li{
+    float:left;
+    height: 50px;
+    list-style-type:none;
+    width:16.6666%;
+    text-align: center;
+}
+
+#menu-main li a span {
+    color: #fff;
+}
+#menu-main li a.store {
+    color: #fff;
+    float:left;
+}
+#navigation ul li a{
+    display:block;
+    text-decoration:none;
+    font-family: 'Libre Baskerville', sans-serif, arial;
+    font-size: 1em;
+    color: #404040;
+    font-weight:600;
+} 
+#menu-main .menu-item.menu-item-type-post_type.menu-item-object-page.menu-item-has-children.menu-item-33{
+    position: relative;
+}
+#menu-main li a:hover, 
+#menu-main li a #menu-item-42.active {
+    background-color: bisque;
+    color:coral;
+}
+#menu-main li a:hover span, 
+#menu-main li a.dropdown-toggle.active span {
+    background-color: bisque;
+    color:coral;
+}
+#menu-main li 
+.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 20;
+}
+#menu-main li 
+.sub-menu li {
+    float: none; 
+    text-align:left;
+    margin-top: 1px;
+}
+#menu-main li 
+.sub-menu a {
+    width: 190px;
+    background-color: dimgray;
+    padding-left:20px;
+    color:#fff;
+}
+#menu-main li 
+.sub-menu a:hover {
+    background-color: bisque;
+    color:coral;
+}
+ul.sub-menu{
+    display:hidden;
+}
+#wrapper{
+    position:relative;
+    max-width:940px;
+    margin:0 auto;
+    overflow:hidden;
+}
+main{
+    width:540px;
+    padding:0 30px 0 30px;
+    margin-bottom: 10px;
+    float:left;
+}
+
+main img{
+    width:400px;
+    margin: 20px auto;
+    align-content: center;
+}
+
+aside{
+    float:right;
+    width: 260px;
+    padding:20px 20px;
+    position: relative;
+    margin-top:20px;
+}
+aside:before {
+    width:300px;
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    z-index:-1;
+}
+img{
+    display:block;
+    max-height: 100%;
+}
+footer {
+    clear:both;
+    background: #ffccb3;
+    overflow:hidden;
+    margin-top: 30px;
+}
+#footer-inner {
+    margin: 0 auto;
+    position:relative;
+    overflow:hidden;
+}
+#containers {
+    float:left;
+    width:300px;
+    padding:2em;
+    margin:10px 20px;
+    margin-bottom:20px;
+    line-height:30px;   
+    background-color: antiquewhite;
+    -webkit-border-radius:10px;
+    border-radius:10px;
+    position:relative;
+    overflow:hidden;
+}
+#box p a{
+    text-decoration:none;
+    color:#404040;
+    font-weight: 600;
+}
+.box1, .box2, .box3 {
+	width:30%;
+	padding:1.595745%;
+}
+.box1 {
+    float:left;
+}
+.box1::before {
+    width: 30%;
+    padding: 1.595745%;
+    position: absolute;
+    content:"";
+    top: 0;
+    left: 0;
+}
+.box2 {
+    float:left;
+    align-content: center;
+}
+.box2::before {
+	width:30%;
+	content:"";
+	position:absolute;
+	top:0;
+	bottom:0;
+}
+
+.box3 {
+    float:right;
+}
+.box3::before {
+    width:30%;
+	/*width:28.510638%;*/
+	content:"";
+	position:absolute;
+	top:0;
+	bottom:0;
+	right:0;
+}
+.box3 ul li {
+    list-style-type:none;
+}
+.box3 ul li a{
+    text-decoration:none;
+    font-size:1.5em;
+    float:left;
+    margin:10px; 
+    color:lightcoral;
+}
+.sources {
+    float:none;
+    clear:both;
+    padding:20px;
+    background-color:bisque;
+}
+.poster{
+    position:relative;
+    width: 100%;
+    margin: 0 auto; 
+}
+.poster img {
+    width: 100%;
+    height:100%;
+    left:0;
+    top:0;
+    z-index: -10;
+}
+.poster h2{
+    color: #404040;
+    position:absolute;
+    top:30px;
+    left:20px;
+    z-index: 10;
+}
+button {
+    background-color: #000;
+    height: 50px;
+    width: 200px;
+    position:absolute;
+    bottom: 20px;
+    right: 60px;
+    z-index: 10;
+    border-radius:10px;
+    padding:0 1em;
+}
+button{
+    text-decoration: none;
+    font-family:'Shrikhand', cursive;
+    font-size:1.3em;
+    color: #fff;
+}
+.poster .CTAh2{
+    color: #404040;
+    position:absolute;
+    top:50px;
+    left:20px;
+    z-index: 10;
+}
+.poster a .CTA {
+    background-color: #000;
+    height: 50px;
+    width: 200px;
+    position:absolute;
+    bottom: 100px;
+    right: 60px;
+    z-index: 10;
+    border-radius:10px;
+    padding:0 1em;
+    text-decoration: none;
+    font-family:'Shrikhand', cursive;
+    font-size:1.3em;
+    color: #fff;
+}
+/*Start Styling Form*/
+   fieldset {
+        border:1px solid gray;
+        padding:10px;
+    }
+    
+    legend {
+        font-size:1.5em;
+        font-style:italic;
+        padding:8px;
+    }
+    label {
+        margin-bottom:5px;
+        width:98%;
+        display:block;
+    }
+    input[type=text], 
+    input[type=email] {
+        width:98%;
+        height:20px;
+        display:block;
+        margin-bottom:10px;
+    }
+    
+    input[type=radio] {
+        margin-right:5px;
+        display:block;
+        margin-left: 5px; 
+    }
+    textarea {
+        width:98%;
+        display:block;
+        margin-bottom: 10px;
+    }
+    form p {
+        margin-bottom: 5px;
+    }
+
+    input[type=submit] {
+        float:right;
+        margin-bottom:10px;
+    }
+#copyright {
+    margin: 100px 0 auto 0;
+    overflow:hidden;
+    position:relative;
+    background:lightcoral;
+    color:#fff;
+    clear: both;
+}
+#copyright li {
+    float:left;
+    list-style-type:none;/*take way the list dot display*/
+    text-align:center; /*center the text vertically*/
+    width:22.5%; /*100% by # of items*/
+    color:#fff;
+}
+#copyright li:nth-child(1),
+#copyright li:nth-child(2),
+#copyright li:nth-child(3) {
+    margin: 20px 0 0 60px;
+    padding-bottom: 10px;
+    width:18%;
+}
+
+#copyright li:nth-child(4),
+#copyright li:nth-child(5) {
+    margin: 10px;
+    width:8%;
+}
+
+footer img {
+    float:left;
+}
+
+/*++++++Typography++++++*/
+
+p {
+    line-height:1.5;
+    margin-bottom:1.5em;
+    margin-top:1em;
+}
+aside p {
+    font-size: .9em;
+}
+h1 {
+    font-family:'Shrikhand', cursive;
+    font-size:2.441em;
+    margin-bottom:.3em;
+}
+h2 {
+    font-family:'Shrikhand', cursive;
+    line-height:1.1;
+    font-size:1.953em;
+    margin-bottom:.3em;
+}
+.box1 h3,
+.box2 h3,
+.box3 h3{
+    margin: 10px;
+}
+.box1 p,
+.box2 p,
+.box3 p{
+    margin: 10px;
+}
+h3 {
+    font-family:'Shrikhand', cursive;
+    line-height:1.1;
+    font-size:1.563em;
+    margin-bottom:.3em;
+}
+h4 {
+    font-family:'Shrikhand', cursive;
+    line-height:1.1;
+    font-size:1.25em;
+    margin-bottom:.3em;
+}
+/* START RESPONSIVE */
+
+/* DESKTOP */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+
+    }
+}
+/* TABLET */
+@media screen and (max-width: 768px) {
+    body {
+
+    }
+    menu-main{
+        display:none;
+        position:absolute;
+        width: 100%;
+        z-index: 20;
+    }
+    nav li {
+        float:none;
+        width:100%;
+        border-bottom: 1px solid white;
+    }
+    .buger-toggle{
+        display:block;
+        margin-left: 92%;
+        font-size: 3em;
+    }
+    nav li a{
+        display:block;
+        text-align: right;
+        padding-right: 20px;
+        background-color: bisque;
+        color:#404040;
+        font-weight:600;
+    } 
+   .sub-menu{
+       width:94%;
+    }
+    .sub-menu li a{
+        text-align: right;
+        padding-right: 300px;
+    }
+     li .sub-menu a{
+        width:90%;
+    }
+    main{
+        float:none;
+        width:auto;
+    }
+    aside {
+        float:none;
+        width:auto;
+        margin-top: 0;
+    }
+    aside:before {
+        width:100%;
+        content:"";
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        z-index:-1;
+    }
+    iframe {
+        width:100%;
+    }
+    .box1, .box2{
+        width:46%;/*286px*/
+        padding:1.595745%;/*15px*/
+    }
+    .box1{
+        float:left;
+    }
+    .box1::before {
+    border:none;
+    width:46%;
+    padding:1.595745%;
+    }
+    .box2 {
+        float:right;
+    }
+    .box2::before {
+        border:none;
+        /*width:268px;
+        padding:15px;*/
+        width:46%;
+        padding:1.595745%;
+        content:"";
+        position:absolute;
+        top:0;
+        bottom:0;
+        /*left:320px;*/
+        right:0;
+    }
+
+    .box3 {
+        float:none;
+        /*width:268px;
+        padding:15px;*/
+        width:96%;
+        padding:1.595745%;
+        clear:both;
+    }
+    .box3::before {
+        border:none;
+        /*width:268px;
+        padding:15px;*/
+        width:28.510638%;
+        padding:1.595745%;
+        content:"";
+        position:absolute;
+        top:0;
+        bottom:0;
+        right:0;
+        z-index:-1;
+    }
+}
+/* PHONE */
+@media screen and (max-width : 480px) {
+    body {
+        width:100%;
+        margin:0 auto;
+    }
+    .box1, .box2, .box3 {
+	padding-top:30px;
+}
+    .box1 {
+        float:none;
+        width:auto;
+    }
+        .box2 {
+        float:none;
+        width:auto;
+    }
+}
