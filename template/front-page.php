@@ -56,10 +56,18 @@
     	<div class="box2" id="box">
             <h2>Latest News</h2>
             <ul>
-            <?php rewind_posts(); ?>
-            <?php query_posts(array('post_per_page' => '4')); ?>    
+            <?php rewind_posts(); // stop previous loop ?> 
+            <?php query_posts(array('post_per_page' => '4', 'category_name' => 'news')); ?>    
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-            <li><?php the_title(); ?></li>
+            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br><small><?php the_time('F jS, Y') ?> in <?php the_category(', ') ?></small></li><br>
+            <?php endwhile; endif; ?>
+            </ul>
+            <h2>Latest :</h2>
+            <ul>
+            <?php rewind_posts(); // stop previous loop ?>
+            <?php query_posts(array('post_per_page' => '4', 'category_name' => 'promotion')); ?>    
+            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><br><small><?php the_time('F jS, Y') ?> in <?php the_category(', ') ?></small></li><br>
             <?php endwhile; endif; ?>
             </ul>
     	</div> <!--end box2-->
