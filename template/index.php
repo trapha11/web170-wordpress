@@ -1,7 +1,8 @@
+
+
 <!---Start WP Head Function --> 
 <?php get_header(); ?>    
-<!---End WP Head Function -->
-
+<!---End WP Head Function --> 
     <div class="poster">
         <h2>"Get Crafty, The Time is Now."</h2>
         <a href="#"><button>Book a class</button></a>
@@ -12,9 +13,9 @@
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <article id="article-<?php the_ID ?>" class="article">
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h2>
-            <small>Posted on <?php the_time('F j, Y'); ?> in the <?php the_category(', '); ?></small>
-            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a>
-            <?php the_excerpt(); ?>
+            <small>Posted by <?php the_author(); ?> on <?php the_time('F j, Y'); ?> in <?php the_category(', '); ?></small>
+            <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a>
+                <p><?php echo the_excerpt(); ?><a href="<?php the_permalink(); ?>">Full post&nbsp;&raquo;</a></p>
             </article>
             <?php endwhile; endif; ?>
             <small>index.php</small>

@@ -1,3 +1,5 @@
+
+
 <!---Start WP Head Function --> 
 <?php get_header(); ?>    
 <!---End WP Head Function --> 
@@ -6,7 +8,8 @@
         <main>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
             <article id="article-<?php the_ID ?>" class="article"></article>
-            <h2><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h2>
+            <h2><?php the_title(''); ?></h2>
+            <small>Posted by <?php the_author(); ?> on <?php the_time('F, jS, Y'); ?> in <?php the_category(', ');?></small>
             <?php the_content(); ?>
             <?php endwhile; endif; ?>
             <small>page.php</small>
