@@ -30,7 +30,15 @@
         wp_list_categories(array('title_li' => '',));
         
     }
+        
     ?>    
-    </ul>    
+    </ul>
+    <!--Pull Quote-->
+    <?php if (get_post_meta($post->ID, 'Quote', true)) : ?>
+    <blockquote><?php echo get_post_meta($post->ID, 'Quote', true) ?></blockquote>
+    <?php endif; ?>
+    <br>
+    <!--Meta tag-->
+    <?php dynamic_sidebar(1); ?>
 </aside>
  

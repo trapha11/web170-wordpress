@@ -13,13 +13,19 @@ Version: 1.0
 //register Navigation Menu
 register_nav_menus(array('main-menu' => __('Main Menu tada!'))); //slug pass through 
 
+//register Sidebars
+register_sidebars(2, array(
+    'before_widget' => '<div id=%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4>',
+    'after_title' => '</h4>'
+));
+
 // add Support for Post Thumbnails & Featured Images
 add_theme_support('post-thumbnails');
 
-
 //Create Page Excerpts
 add_post_type_support('page', 'excerpt');
-
 
 //Create Custom Image Sizes
 add_image_size('icon', 140, 140, true); // 140 pixels wide by 140 pixels tall, hard crop mode
