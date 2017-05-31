@@ -3,8 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="<?php echo get_the_excerpt(); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><?php bloginfo('description'); ?>| <?php bloginfo('name')?></title>
+    <title><?php get_title_tag(); ?></title>
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css">
     <link href="<?php bloginfo('template_directory'); ?>/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
@@ -49,9 +50,9 @@
     
     <!--end static nav bar-->
     
-    <!--Begin WP nav-->
+    <!--Begin WP Menu-->
     <?php wp_nav_menu(array('theme_location' => 'main-menu', 'container' => 'div', 'container_id' => 'navigation',)); ?> 
-    <!--End WP nav-->
+    <!--End WP Menu-->
     
     <!--Start WP Head Function-->
     <?php wp_head(); ?>

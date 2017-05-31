@@ -30,4 +30,30 @@ add_post_type_support('page', 'excerpt');
 //Create Custom Image Sizes
 add_image_size('icon', 140, 140, true); // 140 pixels wide by 140 pixels tall, hard crop mode
 
+function get_title_tag() {
+    
+    global $post; // IMPORTANT !!! VARIABLE SCOPE
+    
+    if (is_page() || is_single()) {
+        
+        echo get_the_title();
+        
+    } else { //404, search, etc
+        
+        bloginfo('description'); //tagline
+        
+    }
+    
+    if($post->post_parent){
+        
+        echo '| ';
+        echo get_the_title($post->post_parent);
+    }
+    
+    echo '| ';
+    bloginfo('name');
+    echo '| ';
+    echo 'Seattle, WA';
+}
+
 ?>
